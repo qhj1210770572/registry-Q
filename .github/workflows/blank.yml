@@ -36,4 +36,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/kube-state-metrics:v2.10.0 docker://registry.cn-hongkong.aliyuncs.com/hyc-q/base/kube-state-metrics:v2.10.0
+        skopeo copy --all docker://docker.io/centos:7 docker://registry.cn-hongkong.aliyuncs.com/hyc-q/base/centos:7
