@@ -30,7 +30,7 @@ jobs:
       # 登录到阿里云镜像仓库  
     - name: Login to Alibaba Cloud Container Registry  
       run: |  
-        echo "${{ secrets.ALIYUN_DOCKER_PASSWORD }}" | docker login --username="${{ secrets.ALIYUN_DOCKER_USERNAME }}" --password-stdin registry.cn-hongkong.aliyuncs.com
+        echo "Qhjhw@4859" | docker login --username="aliyun5227949009" --password-stdin registry.cn-hongkong.aliyuncs.com
     
     # 使用shell命令批量同步所需的镜像到阿里云镜像仓库中
     - name: Use Skopeo Tools Sync Image to ali
