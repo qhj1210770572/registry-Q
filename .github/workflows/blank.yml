@@ -34,10 +34,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 # 在GitHub仓库的Secrets中设置这个密码  
       run: |  
-        echo "$password" | docker login --username="$username" --password-stdin registry.cn-hongkong.aliyuncs.com
+        echo "$password" | docker login --username="$username" --password-stdin registry.cn-hangzhou.aliyuncs.com
     
     # 使用shell命令批量同步所需的镜像到阿里云镜像仓库中
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.10.0 docker://registry.cn-hongkong.aliyuncs.com/hyc-q/kube-state-metrics:v2.10.0
+        skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.10.0 docker://registry.cn-hangzhou.aliyuncs.com/k8s/kube-state-metrics:v2.10.0
