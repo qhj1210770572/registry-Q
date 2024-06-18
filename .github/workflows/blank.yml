@@ -27,14 +27,17 @@ jobs:
       
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2.9.1
-      # 登录到阿里云镜像仓库  
+    # 登录到阿里云镜像仓库  
     - name: Login to Alibaba Cloud Container Registry  
+      env:  
+        username: ${{ secrets.DOCKER_USERNAME }}  
+        password: ${{ secrets.DOCKER_PASSWORD }}
+# 在GitHub仓库的Secrets中设置这个密码  
       run: |  
-        echo "Qhjhw@4859" | docker login --username="aliyun5227949009" --password-stdin registry.cn-hongkong.aliyuncs.com
+        echo "$password" | docker login --username="$username" --password-stdin registry.cn-hongkong.aliyuncs.com
     
     # 使用shell命令批量同步所需的镜像到阿里云镜像仓库中
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        echo "Qhjhw@4859" | docker login --username="aliyun5227949009" --password-stdin registry.cn-hongkong.aliyuncs.com
         skopeo copy --all docker://docker.io/centos:7 docker://registry.cn-hongkong.aliyuncs.com/hyc-q/base/centos:7
