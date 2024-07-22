@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/node:lts   docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/node:lts  
+        skopeo copy --all docker://docker.io/wdkang/kafka-console-ui:latest   docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/kafka-console-ui:latest
