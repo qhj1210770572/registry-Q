@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/prom/mysqld_exporter  docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/mysqld_exporter
+        skopeo copy --all docker://docker.io/prom/mysqld-exporter  docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/mysqld_exporter
