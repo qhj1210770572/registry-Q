@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://skywalking.docker.scarf.sh/apache/skywalking-oap-server:10.2.0 docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/skywalking-oap-server:10.2.0
+        skopeo copy --all docker://docker.io/bitnami/redis:6.2.7-debian-11-r11 docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/redis:6.2.7-debian-11-r11
