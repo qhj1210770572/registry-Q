@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://node:18.19.0-alpine docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/node:18.19.0-alpine
+        skopeo copy --all docker://python:3.7 docker://registry.cn-hangzhou.aliyuncs.com/hyc-q/python:3.7
